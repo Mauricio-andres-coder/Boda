@@ -11,7 +11,7 @@ section {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Cambiado a flex-start para alinear el contenido en la parte superior */
     color: white;
     text-align: center;
     position: relative;
@@ -27,8 +27,7 @@ section {
 .content {
     padding: 20px;
     border-radius: 10px;
-    position: absolute;
-    top: 20%; /* Ajusta esta posición según sea necesario */
+    margin-top: 50px; /* Ajusta esta posición según sea necesario */
 }
 
 h2 {
@@ -58,7 +57,6 @@ button {
 button:hover {
     background-color: #e91e63;
 }
-
    
 
  
