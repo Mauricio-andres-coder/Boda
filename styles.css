@@ -28,7 +28,7 @@ section {
     padding: 20px;
     border-radius: 10px;
     position: absolute;
-    top: 10%; /* Ajusta esta posición según sea necesario */
+    top: 20%; /* Ajusta esta posición según sea necesario */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -64,7 +64,7 @@ button:hover {
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
     .content {
-        top: 5%; /* Ajusta esta posición según sea necesario para dispositivos móviles */
+        top: 40%; /* Ajusta esta posición según sea necesario para dispositivos móviles */
     }
 
     h2 {
@@ -76,4 +76,3 @@ button:hover {
     }
 }
 
- 
