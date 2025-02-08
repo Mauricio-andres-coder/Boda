@@ -1,3 +1,4 @@
+
 /* styles.css */
 body, html {
     margin: 0;
@@ -39,7 +40,7 @@ h2 {
 h1 {
     margin: 10px 0;
     font-size: 4em;
-    font-family: 'Great Vibes', cursive; /* Fuente cursiva elegante */
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
 }
 
 button {
