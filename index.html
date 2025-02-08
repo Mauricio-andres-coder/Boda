@@ -8,83 +8,78 @@
     <source src="Chasing_cars.mp3" type="audio/mpeg">
     Tu navegador no soporta audio HTML.
 </audio>
+<body>
+    <section id="inicio" class="background-inicio">
+        <div class="content">
+            <h2>Ale y Mauri</h2>
+            <h1>Nuestra Boda</h1>
+            <button onclick="playSong()">🎵 Reproducir Canción</button>
+        </div>
+    </section>
 
-<button id="audio-control" onclick="toggleAudio()">Pausar Música</button>
-
-<script>
-    const audio = document.getElementById('background-audio');
-    const button = document.getElementById('audio-control');
-
-    // Reproducir automáticamente al cargar la página
-    window.addEventListener('DOMContentLoaded', () => {
-        try {
+    <script>
+        function playSong() {
+            var audio = new Audio('tu-cancion.mp3');
             audio.play();
-            button.textContent = 'Pausar Música';
-        } catch (error) {
-            console.warn('El navegador bloqueó la reproducción automática.');
-            button.textContent = 'Reproducir Música';
         }
-    });
+    </script>
+</body>
+</html>
 
-    // Función para alternar reproducción y pausa
-    function toggleAudio() {
-        if (audio.paused) {
-            audio.play();
-            button.textContent = 'Pausar Música';
-        } else {
-            audio.pause();
-            button.textContent = 'Reproducir Música';
-        }
-    }
-</script>
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
 
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
 
+.background-inicio {
+    background: url('Boda_chapultepec.jpg') no-repeat center center/cover;
+}
 
+.content {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    padding: 20px;
+    border-radius: 10px;
+}
 
-    <style>
-        body {
-            background-image: url('Boda_chapultepec.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding-top: 20px;
-        }
+h2 {
+    margin: 0;
+    font-size: 2em;
+}
 
-        h2 {
-            font-size: 3em;
-            color: white; /* El texto de ¡Nos Casamos! es blanco */
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
-            margin: 0;
-            padding-bottom: 10px;
-        }
+h1 {
+    margin: 10px 0;
+    font-size: 3em;
+}
 
-        h2 i {
-            color: red; /* El corazón será de color rojo */
-            margin-left: 10px; /* Espacio entre el texto y el corazón */
-        }
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #ff4081;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        p, .date, a {
-            color: white;
-            font-size: 1.2em;
-        }
+button:hover {
+    background-color: #e91e63;
+}
 
-        a.button {
-            display: inline-block;
-            background-color: #33FFB2;
-            color: skyblue;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+    
 
         #countdown {
             color: #FFD700;
