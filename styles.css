@@ -32,14 +32,14 @@ section {
 
 h2 {
     margin: 0;
-    font-size: 2em;
-    font-family: 'Cursive', sans-serif; /* Fuente cursiva para un toque elegante */
+    font-size: 3em;
+    font-family: 'Great Vibes', cursive; /* Fuente cursiva elegante */
 }
 
 h1 {
     margin: 10px 0;
-    font-size: 3em;
-    font-family: 'Cursive', sans-serif; /* Fuente cursiva para un toque elegante */
+    font-size: 4em;
+    font-family: 'Great Vibes', cursive; /* Fuente cursiva elegante */
 }
 
 button {
