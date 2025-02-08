@@ -1,1 +1,143 @@
-# Boda
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nos Casamos!</title>
+<audio id="background-audio" loop>
+    <source src="Chasing_cars.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML.
+</audio>
+
+<button id="audio-control" onclick="toggleAudio()">Pausar Música</button>
+
+<script>
+    const audio = document.getElementById('background-audio');
+    const button = document.getElementById('audio-control');
+
+    // Reproducir automáticamente al cargar la página
+    window.addEventListener('DOMContentLoaded', () => {
+        try {
+            audio.play();
+            button.textContent = 'Pausar Música';
+        } catch (error) {
+            console.warn('El navegador bloqueó la reproducción automática.');
+            button.textContent = 'Reproducir Música';
+        }
+    });
+
+    // Función para alternar reproducción y pausa
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+            button.textContent = 'Pausar Música';
+        } else {
+            audio.pause();
+            button.textContent = 'Reproducir Música';
+        }
+    }
+</script>
+
+
+
+
+    <style>
+        body {
+            background-image: url('Foto_Sanpedro2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+        }
+
+        h2 {
+            font-size: 3em;
+            color: white; /* El texto de ¡Nos Casamos! es blanco */
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        h2 i {
+            color: red; /* El corazón será de color rojo */
+            margin-left: 10px; /* Espacio entre el texto y el corazón */
+        }
+
+        p, .date, a {
+            color: white;
+            font-size: 1.2em;
+        }
+
+        a.button {
+            display: inline-block;
+            background-color: #33FFB2;
+            color: skyblue;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        #countdown {
+            color: #FFD700;
+        }
+
+        #countdown .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #FFD700; /* El contador sigue siendo amarillo */
+        }
+
+        #countdown .label {
+            font-size: 1em;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <h2>¡Nos Casamos! <i class="fa-solid fa-heart"></i></h2>
+    <p>Te invitamos a celebrar nuestra boda civil.</p>
+    <div class="date">Fecha: 10 de Enero de 2025 a las 12 pm</div>
+    <div class="date">Lugar: Juzgado 8 del Registro Civil</div>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <a href="https://www.google.com/maps/place/Juzgado+civil+8/@19.4114809,-99.1611409,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1ff3cfd8b33f1:0x809ea7dac69472e4!8m2!3d19.4114759!4d-99.158566!16s%2Fg%2F1thsg85_?hl=es&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D/"> 
+        <i class="fa-solid fa-location-dot"></i> Cómo Llegar a la Ceremonia
+    </a>
+    <div class="date">Hora Celebración: 6 pm</div>
+    <a href="https://www.google.com/maps/place/Bosques+de+Tepepan/@19.27144,-99.15187,17z/data=!3m1!4b1!4m6!3m5!1s0x85ce00e6cf9699c5:0xaf745e06dfe56e60!8m2!3d19.27144!4d-99.15187!16s%2Fg%2F11b6s14shf?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D">
+        <i class="fa-solid fa-cocktail"></i> Cómo Llegar a la Celebración
+    </a>
+    <div id="countdown">
+        <div class="time">
+            <div class="number" id="days">0</div>
+            <div class="label">Días</div>
+        </div>
+    </div>
+
+    <script>
+        const weddingDate = new Date("2025-01-11T00:00:00").getTime(); 
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                document.getElementById("days").innerText = days;
+            } else {
+                document.getElementById("countdown").innerHTML = "<h2>¡Hoy es el gran día!</h2>";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
