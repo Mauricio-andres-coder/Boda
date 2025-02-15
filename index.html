@@ -14,6 +14,20 @@
             <h1>Nuestra Boda</h1>
             <h1>14-Noviembre -2026</h1>
             <button onclick="playSong()">🎵 Reproducir Canción</button>
+           </script>          // Función para alternar reproducción y pausa
+           function toggleAudio() 
+           {
+           if (audio.paused)
+            {
+            audio.play();
+            button.textContent = 'Pausar Música';
+             } 
+            else {
+            audio.pause();
+            button.textContent = 'Reproducir Música';
+            }
+         }
+         </script>
         </div>
     </section>
 
