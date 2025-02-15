@@ -13,21 +13,23 @@
             <h2>Ale & Mauri</h2>
             <h1>Nuestra Boda</h1>
             <h1>14-Noviembre -2026</h1>
-            <button onclick="playSong()">🎵 Reproducir Canción</button>
-           </script>          // Función para alternar reproducción y pausa
-           function toggleAudio() 
-           {
-           if (audio.paused)
-            {
-            audio.play();
-            button.textContent = 'Pausar Música';
-             } 
-            else {
-            audio.pause();
-            button.textContent = 'Reproducir Música';
+            <button onclick="playSong()">🎵 Reproducir Canción</button>;
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const button = document.getElementById('playSong');
+        const audio = document.getElementById('audio');
+
+        button.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                button.textContent = 'Pausar Música';
+            } else {
+                audio.pause();
+                button.textContent = 'Reproducir Música';
             }
-         }
-         </script>
+        });
+    });
+   </script>
         </div>
     </section>
 
