@@ -14,6 +14,14 @@
             <h1>Nuestra Boda</h1>
             <h1>14-Noviembre -2026</h1>
             <button onclick="playSong()">🎵 Reproducir Canción</button>;
+    
+        </div>
+    </section>
+
+    <audio id="background-audio" loop>
+        <source src="Chasing_cars.mp3" type="audio/mpeg">
+        
+    </audio>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const button = document.getElementById('background-audio');
@@ -30,20 +38,13 @@
         });
     });
    </script>
-        </div>
-    </section>
 
-    <audio id="background-audio" loop>
-        <source src="Chasing_cars.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML.
-    </audio>
-
-    <script>
-        function playSong() {
-            var audio = document.getElementById('background-audio');
-            audio.play();
-        }
-    </script>
+    //<script>
+        //function playSong() {
+           // var audio = document.getElementById('background-audio');
+            //audio.play();
+        //}
+    //</script>
 </body>
 </html>
 
