@@ -27,14 +27,17 @@
     document.addEventListener('DOMContentLoaded', function() {
         const button = document.getElementById('background-audio');
         const audio = document.getElementById('playSong()');
-
+        function playSong() {
+          var audio = document.getElementById('background-audio');
+          audio.play();
+        }
         button.addEventListener('click', function() {
             if (audio.paused) {
                 audio.play();
-                button.textContent = 'Pausar Música';
+                button.textContent = 'Reproducir Música';
             } else {
                 audio.pause();
-                button.textContent = 'Reproducir Música';
+                button.textContent = 'Pausar Musica';
             }
         });
     });
