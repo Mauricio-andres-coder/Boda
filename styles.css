@@ -75,7 +75,7 @@ button:hover {
     left: 50%;
     transform: translateX(-50%);
 }
-h1 {
+h3 {
     margin: 0px 0;
     font-size: 2em;
     font-family: 'Playfair Display', serif; /* Fuente elegante */
