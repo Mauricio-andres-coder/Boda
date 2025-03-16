@@ -43,7 +43,8 @@ h1 {
     margin: 10px 0;
     font-size: 4em;
     font-family: 'Playfair Display', serif; /* Fuente elegante */
-    color: pink;
+    color: white;
+    background-color: #ff4081;
 }
 
 button {
