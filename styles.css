@@ -62,6 +62,25 @@ button {
 button:hover {
     background-color: #e91e63;
 }
+.background-detalles {
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0); /* Degradado de blanco a gris claro */
+    width: 100%;
+    height: 100%;
+}
+.content {
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%; /* Ajusta esta posición según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+}
+h1 {
+    margin: 0px 0;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    color: golden; /* Color dorado *
+}
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
