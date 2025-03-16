@@ -40,10 +40,10 @@ h2 {
 }
 
 h1 {
-    margin: 10px 0;
+    margin: 8px 0;
     font-size: 4em;
     font-family: 'Playfair Display', serif; /* Fuente elegante */
-    color: #FFD700; /* Color dorado */
+    color: golden; /* Color dorado */
     background-color: #ff4081;
 }
 
