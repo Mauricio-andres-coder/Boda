@@ -107,6 +107,13 @@ h3 {
     left: 50%;
     transform: translateX(-50%);
 }
+a {
+    text-decoration: none;
+     margin: 0px 0;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    color:white ;
+}
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
