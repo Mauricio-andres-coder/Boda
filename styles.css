@@ -76,11 +76,16 @@ button:hover {
     left: 50%;
     transform: translateX(-50%);
 }
+
+a h3 {
+    text-decoration: none;
+}
+
+
 h3 {
     margin: 0px 0;
     font-size: 2em;
     font-family: 'Playfair Display', serif; /* Fuente elegante */
-    text-decoration: none;
     color:gold ;
 }
 
