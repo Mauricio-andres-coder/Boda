@@ -43,7 +43,7 @@ h1 {
     margin: 0px 0;
     font-size: 2em;
     font-family: 'Playfair Display', serif; /* Fuente elegante */
-    color: golden; /* Color dorado */
+    color: gold; /* Color dorado */
     background-color: transparent; 
 }
 
@@ -80,7 +80,7 @@ h3 {
     margin: 0px 0;
     font-size: 2em;
     font-family: 'Playfair Display', serif; /* Fuente elegante */
-    color:golden ; /* Color dorado *
+    color:gold ; /* Color dorado *
 }
 
 /* Media Queries para dispositivos móviles */
