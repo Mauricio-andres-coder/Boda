@@ -79,6 +79,10 @@ button:hover {
 
 a {
     text-decoration: none;
+     margin: 0px 0;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    color:gold ;
 }
 
 
