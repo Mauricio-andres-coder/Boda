@@ -80,6 +80,7 @@ h3 {
     margin: 0px 0;
     font-size: 2em;
     font-family: 'Playfair Display', serif; /* Fuente elegante */
+    text-decoration: none;
     color:gold ;
 }
 
