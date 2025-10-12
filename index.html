@@ -1,330 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ale & Mauri — Nuestra Boda</title>
-
-  <!-- Google Font (opcional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --accent:#d98f5a;    /* color cálido */
-      --accent-dark:#b36b3f;
-      --muted:#6b7280;
-      --bg:#fffdf9;
-      --card:#ffffff;
-      --max-w:1000px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,#f6f7f9 0%, var(--bg) 100%);
-      color:#111827;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.4;
-      padding:32px 16px;
-      display:flex;
-      justify-content:center;
-    }
-
-    .wrap{
-      width:100%;
-      max-width:var(--max-w);
-    /*  border:1px solid rgba(0,0,0,.03); */
-      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
-      box-shadow:0 8px 30px rgba(17,24,39,0.06);
-      border-radius:16px;
-      overflow:hidden;
-    }
-
-    header{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      padding:28px;
-    }
-    .hero{
-      flex:1;
-    }
-    .names{
-      font-weight:700;
-      font-size:28px;
-      letter-spacing:-0.02em;
-      margin:0 0 6px 0;
-    }
-    .subtitle{ color:var(--muted); margin:0; font-size:14px;}
-    .dateplace{
-      padding:20px 28px;
-      border-top:1px solid rgba(0,0,0,0.04);
-      display:flex;
-      gap:18px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-    .pill{
-      background:linear-gradient(90deg,var(--accent),var(--accent-dark));
-      color:white;
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:600;
-      font-size:14px;
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-    }
-
-    main{
-      padding:22px 28px 36px 28px;
-      display:grid;
-      grid-template-columns: 1fr 340px;
-      gap:22px;
-    }
-
-    .card{
-      background:var(--card);
-      border-radius:12px;
-      padding:18px;
-      box-shadow:0 4px 18px rgba(2,6,23,0.04);
-    }
-
-    .about h2{ margin:0 0 8px 0; font-size:20px;}
-    .about p{ margin:0 0 12px 0; color:var(--muted); }
-
-    .cta{
-      display:flex;
-      gap:12px;
-      margin-top:8px;
-      flex-wrap:wrap;
-    }
-    .btn{
-      border:0;
-      padding:12px 16px;
-      border-radius:10px;
-      font-weight:600;
-      cursor:pointer;
-    }
-    .btn-primary{
-      background:var(--accent);
-      color:white;
-      box-shadow:0 6px 18px rgba(217,143,90,0.18);
-    }
-    .btn-ghost{
-      background:transparent;
-      border:1px solid rgba(17,24,39,0.06);
-      color:#111827;
-    }
-
-    .info-list{ display:flex; gap:12px; flex-direction:column; margin-top:10px; }
-    .info-item{ display:flex; gap:12px; align-items:flex-start; }
-    .info-item strong{ display:block; font-size:14px; }
-    .muted{ color:var(--muted); font-size:14px; }
-
-    /* Dress code */
-    .dress{
-      margin-top:8px;
-    }
-    .dress .row{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
-    .tag{ background:#f3f4f6; color:#111827; padding:8px 12px; border-radius:999px; font-weight:600; font-size:13px; }
-
-    /* Gift & Hotels */
-    .gifts-list, .hotels-list{ margin-top:10px; display:flex; flex-direction:column; gap:8px; }
-    .hotel{ padding:10px; border-radius:8px; border:1px dashed rgba(0,0,0,0.06); }
-    .hotel a{ color:var(--accent-dark); font-weight:600; text-decoration:none; }
-
-    footer{
-      padding:18px 28px;
-      border-top:1px solid rgba(0,0,0,0.04);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .small{ font-size:13px; color:var(--muted); }
-
-    /* Responsive */
-    @media (max-width:980px){
-      main{ grid-template-columns:1fr; }
-      .hero{ text-align:center; }
-      header{ flex-direction:column; align-items:flex-start; gap:8px; padding-bottom:8px; }
-      .names{ font-size:22px; }
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nos Casamos!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="wrap" role="main">
-    <header>
-      <div class="hero">
-        <div class="names">Ale &amp; Mauri</div>
-        <p class="subtitle">Nos casamos — ¡nos encantaría compartir este día contigo!</p>
-      </div>
-
-      <div style="min-width:220px; text-align:right">
-        <div class="pill">14 Noviembre 2026</div>
-        <div class="muted" style="margin-top:8px; font-size:13px">Jardín Paraíso, Tequesquitengo, Morelos</div>
-      </div>
-    </header>
-
-    <div class="dateplace">
-      <div class="card" style="flex:1">
-        <h3 style="margin:0 0 6px 0">Detalles</h3>
-        <p class="muted">Ceremonia y celebración en Jardín Paraíso. Hora: 16:00 (recomendamos llegar 15:30).</p>
-
-        <div class="cta">
-          <!-- Replace these links with your actual links -->
-          <button class="btn btn-primary" onclick="openLink('YOUR_RSVP_LINK_HERE')">Confirmar asistencia</button>
-          <a class="btn btn-ghost" href="https://www.google.com/maps/search/Jardín+Paraíso+Tequesquitengo" target="_blank" rel="noopener">Cómo llegar</a>
+    <section id="inicio" class="background-inicio">
+        <div class="content">
+            <h2>Ale & Mauri</h2>
+            <h2>Nuestra Boda</h2>
+            <button id="audio-control">🎵 Reproducir Música</button>
         </div>
-      </div>
-
-      <aside style="width:340px;">
-        <div class="card">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <div>
-              <strong>Horario</strong>
-              <div class="muted" style="font-size:13px">Ceremonia 16:00 • Copas y baile después</div>
-            </div>
-            <div style="text-align:right;">
-              <small class="muted">Dress code</small>
-              <div style="font-weight:700; color:var(--accent-dark)">Elegante casual</div>
-            </div>
-          </div>
-
-          <!-- short summary -->
-          <div style="margin-top:12px;">
-            <div class="muted">Confirma tu asistencia para organizarnos mejor. Si tienes dudas escribe al WhatsApp: <strong>+56 9 7776 54013</strong></div>
-          </div>
+    </section>
+    <section id="detalles" class="background-detalles">
+        <div class="content">
+            <h3>Fecha: 14 de Noviembre de 2026</h3>
+            <h3>Ubicación: Jardín paraíso,Tequesquitengo, Morelos</h3>
+            <a href="https://www.google.com/maps/place/Jard%C3%ADn+Para%C3%ADso/@18.6250093,-99.2595713,17z/data=!3m1!4b1!4m6!3m5!1s0x85cdd48acb93de1b:0xa65e39763ebf8766!8m2!3d18.6250042!4d-99.2569964!16s%2Fg%2F1tj5r1wk?authuser=0&entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"> 
+            <i class="fa-solid fa-location-dot"></i> Cómo Llegar a la Ceremonia
+            </a>
         </div>
-      </aside>
-    </div>
-
-    <main>
-      <section class="card about">
-        <h2>¡Queremos celebrarlo contigo!</h2>
-        <p class="muted">Tu compañía es muy importante para nosotros en este momento tan especial. A continuación tienes información práctica para que organices tu viaje y tu look 😉.</p>
-
-        <!-- Dress code -->
-        <div style="margin-top:18px;">
-          <h3 style="margin:0 0 8px 0">Dress code</h3>
-          <p class="muted">Apreciamos looks elegantes pero cómodos — aquí algunas ideas:</p>
-          <div class="dress">
-            <div class="row">
-              <div class="tag">Vestido midi / Traje sport</div>
-              <div class="tag">Tonos tierra / pasteles</div>
-              <div class="tag">Zapatos cómodos (hay césped)</div>
-            </div>
-            <p class="muted" style="margin-top:10px">Si tienes dudas, pregunta por WhatsApp: <strong>+56 9 7776 54013</strong></p>
-          </div>
+        
+    </section>
+     <section id="asistencia" class="background-asistencia">
+        <div class="content">
+            <h4>Esperamos contar con tu presencia</h4>
+            <h4>Tu compañía es muy importante para nosotros en este momento tan especial. Nos encantaría que formes parte de este día inolvidable.</h4>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfeqTc8I7rmV88TafgIXJ-IMN8rY_2226RgLorvl9Wo1E8ggw/viewform?usp=header"> 
+            <i class="fa-solid fa-hand-point-right"></i> Confirma tu asistencia aquí
+            </a>
+            
+            
         </div>
+    </section>
 
-        <!-- Gifts -->
-        <div style="margin-top:18px;">
-          <h3 style="margin:0 0 8px 0">Mesa de regalos</h3>
-          <p class="muted">Si quieres ayudarnos a comenzar esta nueva etapa, puedes ver nuestra mesa de regalos y opciones online.</p>
-          <div class="gifts-list">
-            <!-- Replace href with your gifts link later -->
-            <a class="btn btn-primary" style="width:fit-content" id="giftsBtn" href="YOUR_GIFTS_LINK_HERE" target="_blank" rel="noopener">Ir a la mesa de regalos</a>
-            <div class="muted" style="font-size:13px">(Link disponible — pega tu URL donde dice <code>YOUR_GIFTS_LINK_HERE</code>)</div>
-          </div>
-        </div>
+    <audio id="background-audio" loop autoplay>
+        <source src="Chasing_cars.mp3" type="audio/mpeg">
+    </audio>
 
-        <!-- Hotels -->
-        <div style="margin-top:18px;">
-          <h3 style="margin:0 0 8px 0">Hoteles / hospedaje</h3>
-          <p class="muted">Te recomendamos reservar con anticipación. Aquí algunas opciones cercanas:</p>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const button = document.getElementById('audio-control');
+        const audio = document.getElementById('background-audio');
 
-          <div class="hotels-list">
-            <div class="hotel">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                  <div style="font-weight:700">Hotel Paraíso Lago</div>
-                  <div class="muted" style="font-size:13px">A 10 min del jardín • Shuttle disponible</div>
-                </div>
-                <div><a href="#" onclick="openLink('https://example-hotel-1.com')">Reservar</a></div>
-              </div>
-            </div>
-
-            <div class="hotel">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                  <div style="font-weight:700">Posada El Mirador</div>
-                  <div class="muted" style="font-size:13px">Opción económica • Desayuno incluido</div>
-                </div>
-                <div><a href="#" onclick="openLink('https://example-hotel-2.com')">Reservar</a></div>
-              </div>
-            </div>
-
-            <div class="hotel">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                  <div style="font-weight:700">Residencia Amigos</div>
-                  <div class="muted" style="font-size:13px">Contacta para opciones de habitación compartida</div>
-                </div>
-                <div><a href="mailto:organizacion@ejemplo.com">Contactar</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <aside class="card">
-        <h3 style="margin:0 0 10px 0">Confirmaciones</h3>
-        <p class="muted">Ayúdanos confirmando tu asistencia para organizar la mesa y transporte.</p>
-
-        <div style="margin-top:12px;" class="info-list">
-          <div class="info-item">
-            <div>
-              <strong>Confirma tu asistencia</strong>
-              <div class="muted">Haz click en el botón y completa el formulario.</div>
-            </div>
-          </div>
-
-          <div style="margin-top:10px;">
-            <button class="btn btn-primary" onclick="openLink('YOUR_RSVP_LINK_HERE')">Confirmar asistencia</button>
-          </div>
-
-          <hr style="margin:14px 0; border:none; border-top:1px solid rgba(0,0,0,0.04)">
-
-          <div>
-            <strong>Transporte</strong>
-            <div class="muted">Si necesitas shuttle desde la ciudad avísanos: <a href="mailto:transportes@ejemplo.com">transportes@ejemplo.com</a></div>
-          </div>
-
-          <div style="margin-top:10px;">
-            <strong>Contacto</strong>
-            <div class="muted">WhatsApp: <a href="https://wa.me/569777654013" target="_blank">+56 9 7776 54013</a></div>
-          </div>
-        </div>
-
-      </aside>
-    </main>
-
-    <footer>
-      <div class="small">¿Dudas? Escríbenos por WhatsApp: <strong>+56 9 7776 54013</strong></div>
-      <div class="small">© Ale &amp; Mauri — 2026</div>
-    </footer>
-  </div>
-
-  <script>
-    function openLink(url){
-      if(!url || url.includes('YOUR_RSVP_LINK_HERE') || url.includes('YOUR_GIFTS_LINK_HERE')){
-        // friendly prompt if placeholder still there
-        if(url.includes('GIFTS')) {
-          alert('Aún no has puesto el link de la mesa de regalos. Molestita pega la URL en el código (reemplaza YOUR_GIFTS_LINK_HERE).');
-        } else {
-          alert('Aún no has puesto el link de confirmación. Reemplaza YOUR_RSVP_LINK_HERE con el link de tu formulario.');
-        }
-        return;
-      }
-      window.open(url, '_blank', 'noopener');
-    }
-  </script>
+        button.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                button.textContent = '🎵 Pausar Música';
+            } else {
+                audio.pause();
+                button.textContent = '🎵 Reproducir Música';
+            }
+        });
+    });
+    </script>
 </body>
 </html>
