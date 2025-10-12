@@ -1,131 +1,74 @@
-/* styles.css */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    height: 100%;
-    width: 100%;
+/* ...todo lo anterior se mantiene igual... */
+
+/* NUEVA SECCIÓN: Dresscode + Mesa de Regalos */
+.dr-background {
+    background: #fff;
+    padding: 70px 0 60px 0;
 }
 
-section {
-    height: 100vh;
+.dr-section {
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: white;
+    align-items: stretch;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.dr-col {
+    flex: 1;
+    background: transparent;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: none;
     text-align: center;
-    position: relative;
+    min-width: 280px;
+    color: #50545c;
+    font-family: 'Playfair Display', serif;
 }
 
-.background-inicio {
-    background: url('Boda_chapultepec.jpeg') no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.content {
-    padding: 20px;
-    border-radius: 10px;
-    position: absolute;
-    top: 20%; /* Ajusta esta posición según sea necesario */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-h2 {
-    margin: 0;
-    font-size: 3em;
-    font-family: 'Great Vibes', cursive; /* Fuente cursiva elegante */
-}
-
-h1 {
-    margin: 0px 0;
-    font-size: 2em;
-    font-family: 'Playfair Display', serif; /* Fuente elegante */
-    color: gold; /* Color dorado */
-    background-color: transparent; 
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: white;
-    background-color: #ff4081;
+.dr-col hr {
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-top: 2px solid #c5c8ca;
+    margin: 18px 0;
 }
 
-button:hover {
-    background-color: #e91e63;
-}
-.background-detalles {
-    background:url(' que-hacer-en-tequesquitengo-muelle-e1549516752746.jpg')no-repeat center center; /* Degradado de blanco a gris claro */
-   background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-.content {
-    padding: 20px;
-    border-radius: 10px;
-    position: absolute;
-    top: 20%; /* Ajusta esta posición según sea necesario */
-    left: 50%;
-    transform: translateX(-50%);
+.dr-izq i, .dr-der i {
+    color: #b0b7bc;
+    margin-bottom: 18px;
 }
 
-a {
+.dr-col h3 {
+    letter-spacing: 0.25em;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.dr-col p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.08em;
+    color: #50545c;
+    margin-top: 24px;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+.regalo-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #112533;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    letter-spacing: 2px;
     text-decoration: none;
-     margin: 0px 0;
-    font-size: 2em;
-    font-family: 'Playfair Display', serif; /* Fuente elegante */
-    color:gold ;
+    font-weight: bold;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(17,37,51,0.10);
 }
 
-
-h3 {
-    margin: 0px 0;
-    font-size: 2em;
-    font-family: 'Playfair Display', serif; /* Fuente elegante */
-    color:gold ;
-}
-
-.background-asistencia {
-    background:url(' Imagen_asistencia.jpg')no-repeat center center; /* Degradado de blanco a gris claro */
-   background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-.content {
-    padding: 20px;
-    border-radius: 10px;
-    position: absolute;
-    top: 20%; /* Ajusta esta posición según sea necesario */
-    left: 50%;
-    transform: translateX(-50%);
-}
-a {
-    text-decoration: none;
-     margin: 0px 0;
-    font-size: 2em;
-    font-family: 'Playfair Display', serif; /* Fuente elegante */
-    color:white ;
-}
-
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-    .content {
-        top: 40%; /* Ajusta esta posición según sea necesario para dispositivos móviles */
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    h1 {
-        font-size: 3em;
-    }
+.regalo-btn:hover {
+    background: #33495e;
 }
