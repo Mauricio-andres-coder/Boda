@@ -1,4 +1,3 @@
-/* ...todo lo anterior se mantiene igual... */
 /* styles.css */
 body, html {
     margin: 0;
@@ -116,20 +115,7 @@ a {
     color:white ;
 }
 
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-    .content {
-        top: 40%; /* Ajusta esta posición según sea necesario para dispositivos móviles */
-    }
 
-    h2 {
-        font-size: 2em;
-    }
-
-    h1 {
-        font-size: 3em;
-    }
-}
 /* NUEVA SECCIÓN: Dresscode + Mesa de Regalos */
 .dr-background {
     background: #fff;
@@ -201,4 +187,18 @@ a {
 
 .regalo-btn:hover {
     background: #33495e;
+}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .content {
+        top: 40%; /* Ajusta esta posición según sea necesario para dispositivos móviles */
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
 }
